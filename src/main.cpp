@@ -27,6 +27,7 @@ int main()
 
     while(WindowShouldClose() == false)
     {
+        // UpdateMusicStream(game.music);
         game.HandleInput();
 
         if(EventTriggered(0.2))
