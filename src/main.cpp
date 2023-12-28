@@ -1,5 +1,5 @@
 #include <raylib.h>
-#include "grid.h"
+#include "game.h"
 
 int main()
 {
@@ -8,14 +8,15 @@ int main()
     InitWindow(300, 600, "C++ Tetris");
     SetTargetFPS(60);
 
-    Grid grid = Grid();
-    grid.Print();
+    Game game = Game();
 
     while(WindowShouldClose() == false)
     {
+        game.HandleInput();
         BeginDrawing();
         ClearBackground(darkBlue);
-        grid.Draw();
+
+        game.Draw();
 
         EndDrawing();
     }
