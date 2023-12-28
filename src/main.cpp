@@ -19,7 +19,7 @@ int main()
 {
     Color darkBlue = {44, 44, 127, 255};
 
-    InitWindow(300, 600, "C++ Tetris");
+    InitWindow(500, 620, "C++ Tetris");
     SetTargetFPS(60);
 
     Game game = Game();
@@ -28,7 +28,7 @@ int main()
     {
         game.HandleInput();
 
-        if(EventTriggered(0.02))
+        if(EventTriggered(0.2))
         {
             game.MoveBlockDown();
         }
