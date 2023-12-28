@@ -22,6 +22,7 @@ int main()
     InitWindow(500, 620, "C++ Tetris");
     SetTargetFPS(60);
 
+    Font font = LoadFontEx("fonts/LexendDeca-Light.ttf", 64, 0, 0);
     Game game = Game();
 
     while(WindowShouldClose() == false)
@@ -35,6 +36,8 @@ int main()
 
         BeginDrawing();
         ClearBackground(darkBlue);
+
+        DrawTextEx(font, "Score", {365, 15}, 38, 2, WHITE);
 
         game.Draw();
 
